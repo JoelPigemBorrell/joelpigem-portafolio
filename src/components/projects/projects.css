@@ -1,0 +1,83 @@
+.projects {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+  color: #222;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #667eea;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: #f3f4f6;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 300px;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.project-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #475569;
+  margin-bottom: 1rem;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tech-tag {
+  background-color: #e0e7ff;
+  color: #3730a3;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.project-links a {
+  margin: 0 0.5rem;
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
