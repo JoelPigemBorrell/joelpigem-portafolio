@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaUser, FaEnvelope, FaPaperPlane } from 'react-icons/fa';
-import './Contact.css';
+import './contact.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
