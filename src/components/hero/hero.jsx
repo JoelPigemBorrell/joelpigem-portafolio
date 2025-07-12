@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './Hero.css';
+import './hero.css';
 import photo from '../../assets/photoPersonal.jpg';
 
 
