@@ -8,7 +8,7 @@ import {
 } from "react-icons/si";
 import { MdDeveloperMode } from "react-icons/md"; // para UIKit y SwiftUI genéricos
 
-import './Skills.css';
+import './skills.css';
 
 const skillCategories = {
   "Frontend": ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Angular"],

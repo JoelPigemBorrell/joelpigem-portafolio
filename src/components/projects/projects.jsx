@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Projects.css';
+import './projects.css';
 import ProjectModal from './projectModal/projectModal';
 import photoCarPrediction1 from '../../assets/Information1.png'
 import photoCarPrediction2 from '../../assets/Information2.png'
