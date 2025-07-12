@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ProjectModal.css';
+import './projectModal.css';
 
 const ProjectModal = ({ project, onClose }) => {
   const [currentImage, setCurrentImage] = useState(0);
