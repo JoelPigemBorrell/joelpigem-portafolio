@@ -33,12 +33,13 @@ const Hero = () => {
       {/* Image with animation */}
       <motion.div
         className="hero-image"
-        initial={{ opacity: 0, scale: 0.7, rotate: -15 }}
-        animate={{ opacity: 1, scale: 1, rotate: 0 }}
-        transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+        initial={{ opacity: 0, scale: 0.85 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, delay: 0.6, ease: "easeInOut" }}
       >
         <img src={photo} alt="Joel Pigem" />
       </motion.div>
+
 
       {/* Content with animation */}
       <motion.div

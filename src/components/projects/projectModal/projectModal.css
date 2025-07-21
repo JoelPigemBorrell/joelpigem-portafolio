@@ -28,15 +28,24 @@
   position: absolute;
   top: 1rem;
   right: 1.5rem;
-  font-size: 2rem;
-  background: #dbeafe; /* azul claro */
-  color: #1e40af; /* azul oscuro */
+  width: 2.5rem;        /* ancho fijo */
+  height: 2.5rem;       /* alto fijo */
+  font-size: 1.6rem;    /* tamaño de la X */
+  background: #dbeafe;
+  color: #1e40af;
   border: none;
-  border-radius: 999px;
-  padding: 0.2rem 0.6rem;
+  border-radius: 50%;   /* círculo perfecto */
+  padding: 0;           /* sin padding */
   cursor: pointer;
-  transition: background-color 0.3s ease;
+
+  display: flex;             /* flexbox */
+  justify-content: center;   /* centro horizontal */
+  align-items: center;       /* centro vertical */
+  line-height: 1;            /* para evitar salto vertical */
+  text-align: center;        /* alinear texto */
 }
+
+
 
 .close-button:hover {
   background: #2563eb; /* azul más intenso */

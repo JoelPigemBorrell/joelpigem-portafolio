@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './projects.css';
 import ProjectModal from './projectModal/projectModal';
-import photoCarPrediction1 from '../../assets/Information1.png'
-import photoCarPrediction2 from '../../assets/Information2.png'
-import photoCarPrediction3 from '../../assets/Car.png'
-import photoCarPrediction4 from '../../assets/model.png'
+import photoCarPrediction1 from '../../assets/car1.png'
+import photoCarPrediction2 from '../../assets/car2.png'
+import photoCarPrediction3 from '../../assets/car3.png'
 import login from "../../assets/login.png";
 import map from "../../assets/map.png";
 import list from "../../assets/list.png";
@@ -20,6 +19,7 @@ import daily5 from "../../assets/daily5.png";
 import daily6 from "../../assets/daily6.png";
 import daily7 from "../../assets/daily7.png";
 
+
 const projectsData = [
   {
     id: 1,
@@ -34,7 +34,7 @@ const projectsData = [
     title: "AI Car Price Advisor",
     description: "A web app using AI to accurately estimate used car prices.",
     longDescription: `AI Car Price Advisor is a React-based web application that predicts the market value of used cars using a regression model developed with TensorFlow. It leverages real-world data to provide price estimates based on car make, model year, fuel type, and other key factors.`,
-    images: [photoCarPrediction1, photoCarPrediction2, photoCarPrediction3, photoCarPrediction4],
+    images: [photoCarPrediction1, photoCarPrediction2, photoCarPrediction3],
     technologies: ["React", "TensorFlow", "Firebase"],
   },
   {
@@ -58,6 +58,17 @@ const projectsData = [
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+
+  useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [selectedProject]);
 
   return (
     <section className="projects" id="projects">
