@@ -6,8 +6,8 @@ import Hero from './components/hero/hero';
 import About from './components/about/about';
 import Projects from './components/projects/projects';
 import Skills from './components/skills/skills';
-import Contact from './components/contact/contact';
 import Navbar from './components/navbar/navbar';
+import Footer from './components/footer/footer';
 
 export default function App() {
   return (
@@ -17,7 +17,7 @@ export default function App() {
       <About />
       <Projects />
       <Skills />
-      <Contact />
+      <Footer />
     </div>
   );
 }

@@ -1,38 +1,39 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './projectModal.css';
 
 const ProjectModal = ({ project, onClose }) => {
-  const [currentImage, setCurrentImage] = useState(0);
   if (!project) return null;
 
-  const prevImage = () => {
-    setCurrentImage((prev) => (prev === 0 ? project.images.length - 1 : prev - 1));
-  };
-
-  const nextImage = () => {
-    setCurrentImage((prev) => (prev === project.images.length - 1 ? 0 : prev + 1));
-  };
-
   return (
-    <div className="modal-backdrop" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+    <div className="modal-fullscreen" onClick={onClose}>
+      <div className="modal-container" onClick={(e) => e.stopPropagation()}>
         <button className="close-button" onClick={onClose}>×</button>
 
-        {/* Carrusel */}
-        <div className="carousel">
-          <button className="carousel-btn left" onClick={prevImage}>‹</button>
-          <img src={project.images[currentImage]} alt="Project preview" className="carousel-img" />
-          <button className="carousel-btn right" onClick={nextImage}>›</button>
-        </div>
-
-        <h2>{project.title}</h2>
-        <p>{project.longDescription}</p>
+        <h2 className="modal-title">{project.title}</h2>
+        <p className="modal-description">{project.longDescription}</p>
 
         <div className="tech-stack">
           {project.technologies.map((tech, i) => (
             <span key={i} className="tech-tag">{tech}</span>
           ))}
         </div>
+
+        <div className="image-grid">
+          {project.images.map((img, index) => (
+            <img key={index} src={img} alt={`Screenshot ${index + 1}`} className="grid-image" />
+          ))}
+        </div>
+
+        {project.links && (
+          <div className="modal-links">
+            {project.links.github && (
+              <a href={project.links.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+            )}
+            {project.links.demo && (
+              <a href={project.links.demo} target="_blank" rel="noopener noreferrer">Ver demo</a>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

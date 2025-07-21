@@ -1,83 +1,68 @@
 .projects {
-  padding: 4rem 2rem;
-  background-color: #fff;
+  padding: 6rem 2rem;
+  background: linear-gradient(to bottom, #fafafb, #e3f2fd); /* fondo suave azul claro */
   text-align: center;
-  color: #222;
+  color: #1e293b; /* azul oscuro suave */
+}
+
+.projects-info {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+  color: #4b5563; /* gris azulado */
+  font-style: italic;
 }
 
 .projects h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #667eea;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: #2563eb; /* azul vivo - primary */
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(54, 162, 193, 0.4);
 }
 
 .projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .project-card {
-  background-color: #f3f4f6;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(54, 162, 193, 0.15); /* sombra azulada */
   padding: 1.5rem;
-  width: 300px;
-  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(54, 162, 193, 0.3);
+  border-color: #36a2c1; /* borde azul al hover */
 }
 
 .project-image {
   width: 100%;
-  height: 160px;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 12px;
   margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(54, 162, 193, 0.3);
 }
 
 .project-card h3 {
+  font-size: 1.5rem;
+  color: #1e3a8a; /* azul oscuro */
   margin-bottom: 0.5rem;
-  color: #1e293b;
 }
 
 .project-card p {
   font-size: 1rem;
-  color: #475569;
-  margin-bottom: 1rem;
-}
-
-.tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.tech-tag {
-  background-color: #e0e7ff;
-  color: #3730a3;
-  font-size: 0.75rem;
-  padding: 0.3rem 0.7rem;
-  border-radius: 999px;
-  font-weight: 500;
-}
-
-.project-links a {
-  margin: 0 0.5rem;
-  color: #4f46e5;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.project-links a:hover {
-  text-decoration: underline;
+  color: #475569; /* gris azulado */
+  line-height: 1.4;
 }

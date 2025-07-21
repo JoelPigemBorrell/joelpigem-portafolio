@@ -1,134 +1,221 @@
+:root {
+  --color-bg: #0a0a23;
+  --color-primary: #3f8efc;
+  --color-primary-light: #73a8ff;
+  --color-text-primary: #f0f0f5;
+  --color-text-secondary: #aab2c3;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --btn-shadow: rgba(63, 142, 252, 0.4);
+  --btn-shadow-hover: rgba(63, 142, 252, 0.7);
+  --font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
 .hero-section {
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-  text-align: center;
-  padding: 2rem;
+  padding: 3rem 5vw;
+  font-family: var(--font-family);
+  overflow: hidden;
+  position: relative;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  max-width: 600px;
+  backdrop-filter: blur(12px);
+  background: var(--glass-bg);
+  border-radius: 2rem;
+  border: 1px solid var(--glass-border);
+  padding: 3rem 3.5rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+  z-index: 10;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1.05;
+  color: var(--color-text-primary);
 }
 
 .hero-content h1 span {
-  color: #a3bffa;
+  color: var(--color-primary);
 }
 
 .hero-content h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.04em;
 }
 
 .hero-content p {
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  font-size: 1.2rem;
-}
-
-.hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 35px;
-}
-
-.hero-image img {
-  border-radius: 50%;
-  width: 175px;
-  height: 175px;
-  object-fit: cover;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-image {
-    margin-top: 2rem;
-  }
+  font-size: 1.25rem;
+  min-height: 42px;
+  color: var(--color-text-primary);
+  font-weight: 400;
+  margin-bottom: 1.8rem;
+  font-style: italic;
 }
 
 .hero-buttons {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
+  gap: 1.6rem;
+  flex-wrap: wrap;
 }
 
 .btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: 999px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  padding: 0.85rem 2.5rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1.15rem;
   cursor: pointer;
-  transform-origin: center;
-  display: inline-block;
-  font-size: 1rem;
-  box-sizing: border-box;
+  user-select: none;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 15px var(--btn-shadow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
 }
 
-
 .btn.color {
-  background-color: white;
-  color: #667eea;
+  background: var(--color-primary);
+  color: white;
+  box-shadow: 0 10px 20px var(--btn-shadow);
 }
 
 .btn.color:hover {
-  background-color: #f0f0f0;
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+  background: var(--color-primary-light);
+  box-shadow: 0 15px 30px var(--btn-shadow-hover);
+  transform: translateY(-3px);
 }
 
 .btn.transparent {
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
+  background: transparent;
+  border: 2.5px solid var(--color-primary);
+  color: var(--color-primary);
+  font-weight: 600;
 }
 
 .btn.transparent:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+  background: var(--color-primary);
+  color: white;
+  box-shadow: 0 10px 20px var(--btn-shadow-hover);
+  transform: translateY(-3px);
 }
 
+.btn.glass {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1.8px solid var(--glass-border);
+  color: var(--color-text-primary);
+  backdrop-filter: blur(16px);
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+}
+
+.btn.glass:hover {
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.35);
+  transform: translateY(-3px);
+}
+
+.hero-image {
+  flex-shrink: 0;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(63, 142, 252, 0.5);
+  border: 4.5px solid var(--color-primary);
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-image:hover {
+  transform: scale(1.1) rotate(3deg);
+}
 
 .scroll-indicator {
   position: absolute;
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 2rem;
-  animation: bounce 2s infinite;
-  color: white;
+  font-size: 3rem;
+  color: var(--color-primary-light);
+  opacity: 0.85;
+  user-select: none;
+  pointer-events: none;
+  animation: bounce 2.5s infinite;
+  z-index: 10;
 }
 
+/* Bounce animation */
 @keyframes bounce {
   0%, 100% {
-    transform: translate(-50%, 0);
+    transform: translateX(-50%) translateY(0);
   }
   50% {
-    transform: translate(-50%, 10px);
-  }
-}
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(12px);
   }
 }
 
-.fade-in-up {
-  animation: fadeInUp 1s ease-out forwards;
-  opacity: 0;
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+    padding: 2rem 3vw;
+    gap: 2rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding: 2rem 2.5rem;
+    text-align: center;
+    border-radius: 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .btn {
+    min-width: 140px;
+  }
+
+  .hero-image {
+    width: 180px;
+    height: 180px;
+  }
 }
