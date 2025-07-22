@@ -162,7 +162,7 @@
 
 .scroll-indicator {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
   font-size: 3rem;
@@ -188,7 +188,7 @@
 @media (max-width: 900px) {
   .hero-section {
     flex-direction: column;
-    padding: 2rem 3vw;
+    padding: 4rem 5vw 7rem; /* Aumentamos padding superior */
     gap: 2rem;
   }
 

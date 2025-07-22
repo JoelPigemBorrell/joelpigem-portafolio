@@ -74,7 +74,7 @@ const Hero = () => {
         <div className="hero-buttons">
           <a href="#projects" className="btn color" aria-label="See my work">See My Work</a>
           <a href="#footer" className="btn transparent" aria-label="Let's talk">Let's Talk</a>
-          <a href="/CV_JoelPigem.pdf" download className="btn glass" aria-label="Download CV">Download CV</a>
+          <a href="/cv-joel-pigem.pdf" download className="btn glass" aria-label="Download CV">Download CV</a>
         </div>
       </motion.div>
 
