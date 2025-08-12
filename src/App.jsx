@@ -6,8 +6,10 @@ import Hero from './components/hero/hero';
 import About from './components/about/about';
 import Projects from './components/projects/projects';
 import Skills from './components/skills/skills';
+import ExperienceEducation from './components/ExperienceEducation/experienceEducation';
 import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
+
 
 export default function App() {
   return (
@@ -16,6 +18,7 @@ export default function App() {
       <Hero />
       <About />
       <Projects />
+      <ExperienceEducation />
       <Skills />
       <Footer />
     </div>
