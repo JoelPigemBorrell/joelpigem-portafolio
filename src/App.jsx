@@ -1,15 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import Navbar from './components/navbar/navbar';
 import Hero from './components/hero/hero';
 import About from './components/about/about';
 import Projects from './components/projects/projects';
-import Skills from './components/skills/skills';
 import ExperienceEducation from './components/ExperienceEducation/experienceEducation';
-import Navbar from './components/navbar/navbar';
+import Skills from './components/skills/skills';
 import Footer from './components/footer/footer';
-
 
 export default function App() {
   return (
@@ -18,8 +14,8 @@ export default function App() {
       <Hero />
       <About />
       <Projects />
-      <ExperienceEducation />
       <Skills />
+      <ExperienceEducation />
       <Footer />
     </div>
   );
