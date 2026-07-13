@@ -6,8 +6,18 @@ import './experienceEducation.css';
 const experiences = [
   {
     title: 'Web & Mobile Developer',
+    company: 'Vico',
+    period: 'Jul 2026 – Present',
+    details: [
+      'Development of web and mobile applications using JavaScript, PHP, SwiftUI, and Kotlin.',
+      'Building responsive frontends and robust backend services.',
+      'Cross-platform mobile development for iOS and Android.',
+    ],
+  },
+  {
+    title: 'Web & Mobile Developer',
     company: 'SymphonicHub',
-    period: '2024 – Present',
+    period: '2024 – 2026',
     details: [
       'Developed and maintained web and mobile applications using modern technologies.',
       'Collaborated on design, implementation, and deployment of software solutions.',
